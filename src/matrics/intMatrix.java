@@ -67,6 +67,16 @@ public class intMatrix {
 			for (int j = 0; j < N; j++)
 				data[i][j] = rm.nextInt(2);
 	}
+	public void randomSortedInit() {
+
+		Random rm = new Random();
+
+		for (int i = 0; i < M; i++){
+			data[i][0] = 5 + i*4;
+			for (int j = 1; j < N; j++)
+				data[i][j] = data[i][0] + 5*j;
+		}
+	}
 
 	public void print() {
 		for (int i = 0; i < M; i++) {
